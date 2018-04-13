@@ -2280,7 +2280,7 @@ switch {
     font-weight: bold;
     font-size: 6.5pt;
     outline-offset: -4px;
-    margin: 0;
+    margin: 4px;
     border: 1px solid @borders;
     border-radius: 4px;
     color: alpha(@theme_fg_color, 0.6);
@@ -2647,10 +2647,6 @@ headerbar entry {
     padding: 7.5px 8px;
     border: none;
 }
-
-headerbar switch {
-    margin: 8px;
-}    
 
 /***********
  * toolbar *
