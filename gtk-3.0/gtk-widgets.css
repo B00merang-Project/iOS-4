@@ -332,13 +332,19 @@ row {
 
 row:selected,
 row:selected:hover,
-row:selected:focus {
+row:selected:focus,
+row:selected:active,
+row:selected:checked,
+row:selected:backdrop {
     border: none;
-    background-color: @theme_selected_bg_color;
     background-color: transparent;
     background-image: linear-gradient(#658af5,
                                       #2460f4);
     color: @theme_selected_fg_color;
+}
+
+row grid {
+	background-color: transparent;
 }
 
 /*******************
@@ -1279,7 +1285,6 @@ modelbutton:selected,
 modelbutton:active:hover {
     border-width: 1px;
     border-color: transparent;
-    background-color: transparent;
     border-color: #647fc4;
     background-color: transparent;
     background-image: linear-gradient(#658af5,
@@ -3332,24 +3337,24 @@ toolbar .linked button:disabled:only-child {
 
 /* linked titlebar buttons */
 /* Override: let shadows for checked buttons */
-headerbar button:not(:checked).raised.linked,
-headerbar .raised.linked button:not(:checked),
-headerbar .linked button:not(:checked) {
+headerbar button:not(:checked).raised.linked:not(:last-child),
+headerbar .raised.linked button:not(:checked):not(:last-child),
+headerbar .linked button:not(:checked):not(:last-child) {
     box-shadow: inset -1px 0 shade(@titlebar_bg_color, 0.9);
 }
 
-headerbar button.raised.linked:active,
-headerbar .raised.linked button:active,
-headerbar .linked button:active {
+headerbar button.raised.linked:active:not(:last-child),
+headerbar .raised.linked button:active:not(:last-child),
+headerbar .linked button:active:not(:last-child) {
     box-shadow: inset -1px 0 shade(@titlebar_bg_color, 0.9),
                 inset 1px 0 alpha(@dark_shadow, 0.07),
                 inset 0 1px alpha(@dark_shadow, 0.08),
                 inset 0 -1px alpha(@dark_shadow, 0.05);
 }
 
-headerbar button.raised.linked:disabled,
-headerbar .raised.linked button:disabled,
-headerbar .linked button:disabled {
+headerbar button.raised.linked:disabled:not(:last-child),
+headerbar .raised.linked button:disabled:not(:last-child),
+headerbar .linked button:disabled:not(:last-child) {
     box-shadow: inset -1px 0 shade(@titlebar_bg_color, 0.85);
 }
 
