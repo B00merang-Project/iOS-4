@@ -2568,6 +2568,7 @@ headerbar:backdrop {
     background-color: transparent;
     background-image: none;
     color: @theme_unfocused_fg_color;
+    border-color: shade(@theme_unfocused_bg_color, 0.75);
 }
 
 headerbar button.image-button {
@@ -3325,13 +3326,13 @@ toolbar .linked button:disabled:only-child {
 headerbar button:not(:checked).raised.linked:not(:last-child),
 headerbar .raised.linked button:not(:checked):not(:last-child),
 headerbar .linked button:not(:checked):not(:last-child) {
-    box-shadow: inset -1px 0 shade(@titlebar_bg_color, 0.9);
+    box-shadow: inset -1px 0 @titlebar_bg_color;
 }
 
 headerbar button.raised.linked:active:not(:last-child),
 headerbar .raised.linked button:active:not(:last-child),
 headerbar .linked button:active:not(:last-child) {
-    box-shadow: inset -1px 0 shade(@titlebar_bg_color, 0.9),
+    box-shadow: inset -1px 0 @titlebar_bg_color,
                 inset 1px 0 alpha(@dark_shadow, 0.07),
                 inset 0 1px alpha(@dark_shadow, 0.08),
                 inset 0 -1px alpha(@dark_shadow, 0.05);
@@ -3341,6 +3342,13 @@ headerbar button.raised.linked:disabled:not(:last-child),
 headerbar .raised.linked button:disabled:not(:last-child),
 headerbar .linked button:disabled:not(:last-child) {
     box-shadow: inset -1px 0 shade(@titlebar_bg_color, 0.85);
+}
+
+/* backdrop */
+headerbar button:backdrop:not(:checked).raised.linked:not(:last-child),
+headerbar .raised.linked button:backdrop:not(:checked):not(:last-child),
+headerbar .linked button:backdrop:not(:checked):not(:last-child) {
+    box-shadow: inset -1px 0 shade(@theme_bg_color, 0.8);
 }
 
 /* remove box shadow from last-child and only-child */
@@ -4226,11 +4234,14 @@ messagedialog.csd decoration {
 .titlebar:backdrop,
 .titlebar:not(headerbar):backdrop {
     background-image: linear-gradient(to bottom,
-                                      shade(@theme_unfocused_bg_color, 0.9),
-                                      shade(@theme_unfocused_bg_colot, 0.75));
+                                      shade(@theme_unfocused_bg_color, 0.93),
+                                      shade(@theme_unfocused_bg_color, 0.9) 40%,
+                                      shade(@theme_unfocused_bg_color, 0.85) 50%,
+                                      shade(@theme_unfocused_bg_color, 0.82) 100%);
     background-color: @theme_unfocused_bg_color;
     color: @theme_unfocused_fg_color;
     text-shadow: none;
+    border-color: shade(@theme_unfocused_bg_color, 0.75);
 }
     
 /* CSD */
@@ -4256,6 +4267,9 @@ headerbar.default-decoration:backdrop,
 .csd .default-decoration.titlebar:backdrop:not(headerbar) {
     background-color: @theme_unfocused_bg_color;
     background-image: linear-gradient(to bottom,
-                                      shade(@theme_unfocused_bg_color, 0.9),
-                                      shade(@theme_unfocused_bg_colot, 0.75));
+                                      shade(@theme_unfocused_bg_color, 0.93),
+                                      shade(@theme_unfocused_bg_color, 0.9) 40%,
+                                      shade(@theme_unfocused_bg_color, 0.85) 50%,
+                                      shade(@theme_unfocused_bg_color, 0.82) 100%);
+    border-color: shade(@theme_unfocused_bg_color, 0.75);
 }
