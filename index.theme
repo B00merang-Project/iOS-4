@@ -1,11 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=macOS Sierra
-Comment=A theme by Christian Medel (Elbullazul) simulating OS X 10.11 El Capitan / macOS Sierra
-Comment=v0.5
+Name=iOS 4
+Comment=A theme by Christian Medel (Elbullazul)
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=macOS Sierra
-MetacityTheme=macOS Sierra
+GtkTheme=iOS 4
+MetacityTheme=iOS 4
+IconTheme=Mac-OS-X-Lion
+CursorTheme=DMZ-Black
 ButtonLayout=close,minimize,maximize:
