@@ -455,11 +455,9 @@ editablelabel > stack > text > selection {
 
 button {
   padding: 4px 8px;
-  border-style: solid;
-  border-width: 1px;
   border-radius: 4px;
+  border: 1px solid #b5b5b5;
   color: #000000;
-  border-color: #b5b5b5;
   background-color: #FFFFFF;
   background-image: linear-gradient(to bottom, #FFFFFF 40%, #f2f2f2 60%);
   box-shadow: 0 1px rgba(128, 128, 128, 0.1); }
@@ -493,9 +491,9 @@ button {
     border-color: transparent;
     border-radius: 4px;
     color: #000000;
-    box-shadow: none;
+    background-color: transparent;
     background-image: none;
-    background-color: transparent; }
+    box-shadow: none; }
     button.flat:hover {
       color: #000000;
       border-color: #b5b5b5;
@@ -527,10 +525,8 @@ button {
       color: #8C8C8C; }
 
 button.destructive-action {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #a30000;
   border-radius: 4px;
+  border: 1px solid #a30000;
   color: #fae6e6;
   background-color: #CC0000;
   background-image: linear-gradient(to bottom, #e00000 40%, #bd0505 60%); }
@@ -544,10 +540,8 @@ button.destructive-action {
     background-color: #d64747; }
 
 button.suggested-action {
-  border-width: 1px;
-  border-style: solid;
   border-radius: 4px;
-  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
   background-color: #bebebe;
   background-image: linear-gradient(to bottom, #2680ed 40%, #265ea2 60%); }
   button.suggested-action:active, button.suggested-action:checked {
@@ -696,9 +690,9 @@ toolbar {
     border-color: transparent;
     border-radius: 4px;
     color: #FFFFFF;
-    box-shadow: none;
+    background-color: transparent;
     background-image: none;
-    background-color: transparent; }
+    box-shadow: none; }
     toolbar button.flat:hover {
       color: #FFFFFF;
       border-color: #b5b5b5;
@@ -2514,9 +2508,9 @@ menubutton arrow {
   border-color: transparent;
   border-radius: 4px;
   color: #000000;
-  box-shadow: none;
+  background-color: transparent;
   background-image: none;
-  background-color: transparent; }
+  box-shadow: none; }
   .toolbar > button:hover,
   .toolbar > :not(.linked) > button:hover,
   .toolbar :not(.linked) > menubutton > button:hover,
