@@ -1578,22 +1578,20 @@ progressbar {
   color: gray; }
   progressbar > trough {
     border-radius: 6px;
-    background-color: rgba(0, 0, 0, 0.1);
-    background-image: linear-gradient(to top, #FFFFFF, #f9f9f9 50%, #f2f2f2 51%, #c9c9c9); }
-  progressbar > trough > progress {
     border: none;
+    background-color: rgba(0, 0, 0, 0.1); }
+  progressbar > trough > progress {
     border-radius: 6px;
-    background-color: #2563AE;
-    background-image: linear-gradient(to bottom, #9dbbdf, #7298c5 50%, #1f71d4 51%, #2564b0); }
+    border: none;
+    background-color: #2563AE; }
   progressbar.vertical > trough {
-    border-radius: 6px;
-    background-color: rgba(0, 0, 0, 0.1);
     background-image: linear-gradient(to left, #FFFFFF, #f9f9f9 50%, #f2f2f2 51%, #c9c9c9); }
   progressbar.vertical > trough > progress {
-    border: none;
-    border-radius: 6px;
-    background-color: #2563AE;
     background-image: linear-gradient(to right, #9dbbdf, #7298c5 50%, #1f71d4 51%, #2564b0); }
+  progressbar.horizontal > trough {
+    background-image: linear-gradient(to top, #FFFFFF, #f9f9f9 50%, #f2f2f2 51%, #c9c9c9); }
+  progressbar.horizontal > trough > progress {
+    background-image: linear-gradient(to bottom, #9dbbdf, #7298c5 50%, #1f71d4 51%, #2564b0); }
   progressbar.horizontal > trough {
     min-width: 150px; }
   progressbar.vertical > trough {
