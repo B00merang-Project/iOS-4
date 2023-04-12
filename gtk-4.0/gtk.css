@@ -678,9 +678,6 @@ toolbar {
   toolbar:backdrop {
     color: #8C8C8C;
     background-color: #EDEDED; }
-  toolbar:disabled {
-    color: #777777;
-    background-color: #e1e1e1; }
   toolbar button.flat {
     border-color: transparent;
     border-radius: 4px;
@@ -808,17 +805,18 @@ infobar .close {
     background-color: rgba(0, 0, 0, 0.05); }
 
 headerbar {
-  padding: 4px 8px;
   min-height: 30px;
+  padding: 4px 8px;
+  border-bottom: 1px solid #515c6a;
   color: #FFFFFF;
   background-color: #8699B2;
   background-image: linear-gradient(to bottom, #b2c1d4, #889bb3 50%, #8194ae 51%, #798ca6);
-  border-bottom: 1px solid #515c6a; }
+  box-shadow: none; }
   headerbar:backdrop {
+    border-color: #a6a6a6;
     color: #8C8C8C;
-    background-image: linear-gradient(to bottom, white, #efefef 50%, #ebebeb 51%, #e1e1e1);
     background-color: #EDEDED;
-    border-color: #a6a6a6; }
+    background-image: linear-gradient(to bottom, white, #efefef 50%, #ebebeb 51%, #e1e1e1); }
   .tiled headerbar, .tiled headerbar:backdrop, .maximized headerbar, .maximized headerbar:backdrop {
     border-radius: 0; }
   separator:first-child + headerbar, separator:first-child + headerbar:backdrop, headerbar:first-child, headerbar:first-child:backdrop {
@@ -1826,13 +1824,11 @@ columnview row:not(:selected) cell editablelabel.editing text selection {
     border-spacing: 12px; }
 
 .app-notification {
+  margin: 5px;
   border: 1px solid #d5d5d5;
-  background-color: #FFFFFF;
   color: #000000;
-  padding: 8px;
-  margin: 5px; }
-  .app-notification border {
-    border: none; }
+  background-color: #FFFFFF;
+  padding: 8px; }
 
 expander {
   min-width: 16px;
@@ -2249,7 +2245,7 @@ shortcut > .keycap {
   font-size: smaller; }
 
 stackswitcher > button.text-button {
-  min-width: 100px; }
+  min-width: 120px; }
 
 stackswitcher.circular {
   border-spacing: 12px; }
